@@ -256,6 +256,7 @@ variable "security_group_ids" {
 
 variable "tags" {
   type = object({
+    Name = string
     Author      = string
     Environment = string
     Provisioner = string
