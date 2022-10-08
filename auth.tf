@@ -46,7 +46,6 @@ data "aws_eks_cluster_auth" "eks" {
   name  = aws_eks_cluster.default.id
 }
 
-
 provider "kubernetes" {
   host                   = coalesce(aws_eks_cluster.default.endpoint, var.dummy_kubeapi_server)
   cluster_ca_certificate = base64decode(local.certificate_authority_data)
